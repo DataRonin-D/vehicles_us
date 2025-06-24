@@ -4,9 +4,9 @@ import plotly.express as px
 import streamlit as st
 
 # Load the dataset
-user_home = Path.home()
-RUTA = 'vehicles_us/vehicles_us.csv'
-pathcomplete = user_home / RUTA
+base_dir = Path(__file__).resolve().parent
+RUTA = 'vehicles_us.csv'
+pathcomplete = base_dir / RUTA
 car_data = pd.read_csv(pathcomplete)
 
 #histograma
